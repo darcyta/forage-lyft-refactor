@@ -5,6 +5,5 @@ class Car(ABC):
     self.engine = engine
     self.battery = battery
 
-  @abstractmethod
   def needs_service(self):
-    return self.engine.needs_service() and self.battery.needs_service()
+    return self.engine.needs_service() or self.battery.needs_service()
